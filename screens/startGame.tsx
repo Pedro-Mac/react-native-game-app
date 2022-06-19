@@ -4,7 +4,8 @@ import React from 'react'
 const StartGame = () => {
   return (
     <View>
-        <TextInput />
+     <Text>AAAA</Text>
+        
     </View>
   )
 }
