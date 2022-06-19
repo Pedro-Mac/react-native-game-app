@@ -1,11 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import React, { ReactNode } from "react";
 
-const PrimaryButton = () => {
-  return (<Button />
-  )
+interface Props {
+  children: ReactNode;
+  onPress: () => void;
 }
 
-export default PrimaryButton
+const PrimaryButton = ({ children, onPress }: Props) => {
+  return (
+    <Pressable onPress={onPress}>
+      <View>
+        <Text>{children}</Text>
+      </View>
+    </Pressable>
+  );
+};
 
-const styles = StyleSheet.create({})
+export default PrimaryButton;
+
+const styles = StyleSheet.create({});
